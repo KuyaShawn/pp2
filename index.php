@@ -2,7 +2,7 @@
 // Turn on error reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-
+require 'functions.php';
 
 ?>
 
@@ -18,6 +18,7 @@ error_reporting(E_ALL);
 <body>
 
 <?php
+    $numbers = [ 7, 9, 8, 9, 8, 8, 6];
     echo "<title>Pair Program 2</title>";
     /*
      * Eashune Abenojar
@@ -27,15 +28,9 @@ error_reporting(E_ALL);
     */
     echo "<h1>Pair Program 2</h1>";
     echo "<h2>PHP Array Practice.</h2>";
-
-    $numbers = [ 7, 9, 8, 9, 8, 8, 6];
-    function printArry($numbers){
-        $arrayLength = count($numbers);
-        for($i = 0; $i < $arrayLength; $i++){
-            echo "<p>$numbers[$i]</p>";
-        }
-    }
-    printArry($numbers);
+    echo  printArry($numbers);
+    echo "<p>Largest Number in array: " . largest($numbers) . "</p>";
+    echo  removeDups($numbers);
 
 ?>
 
